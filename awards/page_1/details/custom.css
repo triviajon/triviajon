@@ -1,0 +1,58 @@
+@keyframes load {
+    from {
+      background-color: rgb(236, 165, 189);
+    }
+    to {
+      background-color: rgb(197, 176, 138);
+    }
+  }
+
+  body {
+    height: 100%;
+    overflow: hidden;
+    animation: 3s load forwards;
+  }
+
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-top: -85px;
+    z-index: -1;
+  }
+
+    @keyframes float {
+        0% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+        50% {
+            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+            transform: translatey(-20px);
+        }
+        100% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+ }
+
+    @keyframes fadein {
+        from { 
+            opacity: 0; 
+        }
+        to {
+            opacity: 1; 
+        }
+    }
+
+    .image_container {
+        padding: 2% 5%;
+        height: 50%;
+        position: relative;
+        z-index: -1;
+    }
+
+    .image_container img {
+        border-radius: 5%;
+        animation: fadein 2s ease-in normal, float 15s ease-in-out infinite;
+    }
