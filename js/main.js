@@ -133,44 +133,7 @@ $("img.email").click(function(){
 });
 
 $("img.resume").click(function(){
-	window.location.href = "#";
-});
-
-$("img.about").click(function(){
-	function scale(w_percent, h_percent) {
-		var scrW = $(window).width() - 30,
-			scrH = $(window).height() - 30,
-			h, w;
-		return {
-			'width': w_percent/100 * scrW,
-			'height': h_percent/100 * scrH
-		};
-	};
-	
-	$("iframe")
-		.attr( "width", 0 )
-		.attr( "height", "auto" );
-	$( "#popupAbout iframe" ).contents().find( "#abouttt" )
-	.css( { "width" : 0, "height" : 0 } );
-	$( "#popupAbout" ).on({
-		popupbeforeposition: function() {
-			 var size = scale(80, 70),
-					w = size.width,
-					h = size.height;
-			$( "#popupAbout iframe" )
-				.attr( "width", w )
-				.attr( "height", h );
-			$( "#popupAbout iframe" ).contents().find( "#abouttt" )
-				.css( { "width": w, "height" : h } );
-		},
-		popupafterclose: function() {
-			$( "#popupAbout iframe" )
-				.attr( "width", 0 )
-				.attr( "height", 0 );
-			$( "#popupAbout iframe" ).contents().find( "#abouttt" )
-				.css( { "width": 0, "height" : 0 } );
-		}
-	});
+	window.location.href = "content/resume.pdf";
 });
 
 document.body.style.cursor = 'none';

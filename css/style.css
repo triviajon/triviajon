@@ -11,7 +11,7 @@ body {
   width: 5px;
   height: 5px;
   border: 10px solid white;
-  transition: .03s;
+  transition: 0s;
   border-radius: 100%;
   pointer-events: none;  
   transform: translate(-50%, -50%);
@@ -108,11 +108,6 @@ body {
 .no-preserve-3d .vis-floating-background {
   /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
   position: relative;
-}
-
-iframe {
-  display: block;
-  width: 70%;
 }
 
 @-webkit-keyframes glow {
