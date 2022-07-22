@@ -6,28 +6,52 @@
         <meta name="description" content="Jon's online website">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-        
+        <title> Jon Rosario's Website </title>
     </head>
-    <body>
-        <div id="cursor"></div>
+<body>
+    <div class="main">
+        <h1> Hello. I'm Jon Rosario. </h1>
+        <h4 class="indent2"> and I'm trying something  <i> <a href="/content/explain/index.html"> different. </a> </i> </h4>
+        <p> Welcome to my new website. You can find shortcuts to all the important stuff about me in the links section. </p>
+        <h2> About me. </h2>
+        <p> I am a rising junior at MIT (class of 2024) who is studying <b>Mathematics with Computer Science</b> (18-C).
+            I am also minoring in <b>Physics</b> and have a concentration in <b>Music</b>. 
+            My general academic interests include many aspects of computational mathematics, data science, 
+            and a more recent interest in quantum computation. 
 
-        <div class="vis-background-wrapper">
-            <figure class="vis-floating-background">
-                <img src="content/background.jpg">
-                <img src="content/jonros.png" style="height: 10%; top: 11%; left: 10%;" class="about">
-                
-                <img src="content/hobbies.png" style="height: 3.333%; top: 20%; left: 12%" class="about">
-                <img src="content/copyright.png" style="height: 2.667%; top: 85%; left: 10%;">
-                
-                <img src="content/GitHub-Mark-Light-120px-plus.png" style="height: 15%; width: 7.05%; top: 30%; left: 10%" id="icon" class="github">
-                <img src="content/107159_circle_linkedin_icon.png" style="height: 15%; top: 50%; left: 10%" id="icon" class="linkedin">
-
-                <img src="content/Mail_icon.png" style="height: 15.5%; top: 30%; left: 75%" id="icon" class="email">
-                <img src="content/kindpng_4992615.png" style="height: 15.5%; top: 50%; left: 75%" id="icon" class="resume">
-            </figure>
-        </div>
+            If you're interested in any of my past or present projects (academic or personal), check out my GitHub page.  </p>
+            
+        <h2> Even <i>More</i> About Me. </h2>
+        <p> I am was a member of the <b>Rocket Team</b> Structures™ subteam and part of executive as infrastructure (IT) chair.
+        Last year, I made drawings of structures CAD parts in SolidWorks and additionally machined those parts in machine
+        shops on campus. I also made contributions to the Rocket Team Wiki for the conservation of knowledge
+        between generations of Rocket Team. </p>
         
-        <script src="js/jquery-2.1.1.js"></script>
-        <script src="js/main.js"></script>
-    </body>
-</html>
+        <p> I am broadly interested in music and arts. 
+        Last January, I worked with the Musical Theatre Guild (MTG) at MIT in the production of Pippin. </p>
+        <p> I was a editor for the Shakespeare Ensemble where I worked on the production of Timon of Athens,
+        a virtual five act play. </p>
+        <p> I am also a member of the Asymptones as a baritone singer, assistant music director, and social chair. 
+        I took 21M.301 Spring 2021, a theory class on harmony and counterpoint in music. </p>
+        
+        <p>I also enjoy watching musicals, following DCI, and playing rhythm games and Tetris. 
+        Feel to contact me if you're interested in talking about any of my interests!  </p>
+        
+        <p> I also like to publish a snippet of my music taste. Check out the playlist <a href="https://open.spotify.com/playlist/7Hs8wy9wArSIarx7rx38oK?si=0caf183f2ce4467b"> here. </a></p>
+    </div>
+
+    <div class="sidebar"> 
+        <h2> Links: </h2>
+        <p class="indent"> <a href="/"> Homepage </a> </p>
+        <p class="indent"> <a href="https://github.com/triviajon"> GitHub </a> </p>
+        <p class="indent"> <a href="https://www.linkedin.com/in/jon-rosario-6330741b2/"> LinkedIn </a> </p>
+        <p class="indent"> <a href="/content/resume.pdf"> Curriculum Vitae (CV) </a> </p>
+        <p class="indent"> <a href="/content/math/"> Math </a> </p>
+        <p class="indent"> <a href="/content/journal"> Journal </a> </p>
+        <p class="indent"> <a href="/content/courseload"> Courseload </a> </p>
+        <p class="indent"> <a href="/content/contact"> Contact </a> </p>
+    </div>
+
+    <footer> <h6> Too <b id="brightness_1">bright?</b> Toggle <button onclick="ToggleDarkMode()" id="brightness_2"> dark mode. </button> </h6> </footer>
+    <script src="/js/main.js"></script>
+</body>

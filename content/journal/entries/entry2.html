@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jon's online website">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <title> Jon Rosario's Website </title>
+
+    </head>
+<body>
+    <div class="main">
+        <h1> Jon Rosario's Journal. </h1>
+        <h3> Tomodachi Life Reverse Engineering Algorithm in Python </h3>
+        <p> This was a project aimed at reverse engineering the compatibility meter for any two characters
+            in the popular video game "Tomodachi Life." Since the compatibility is based purely on any two 
+            character's birthdate in the format [MM/DD/YYYY], my intital attempt was to convert the two dates 
+            into a binary format (even -> 0, odd -> 1), and run multiple tests on the combination of the two dates. </p>
+        <img src="/content/journal/entries/files/dateComboCode.png">
+        <p>
+            The tests were ultimately all failures, but it taught me a lot about importing, working with,
+            and exporting data in Python. It was also a good way for me to practice my use of OOP. 
+            It actually happened to be my first experience with hash functions, which I hadn't realized at the time. 
+            I still plan on reverse engineering the Tomodachi Life compatibility meter by it out using other
+            combination ideas. </p> 
+
+
+        <p> The results for this project can be <a href="/content/journal/entries/files/tomadachi_life_results.csv">found here</a>. </p>
+
+    </div>
+
+
+    <div class="sidebar"> 
+        <h2> Links: </h2>
+        <p class="indent"> <a href="/"> Homepage </a> </p>
+        <p class="indent"> <a href="https://github.com/triviajon"> GitHub </a> </p>
+        <p class="indent"> <a href="https://www.linkedin.com/in/jon-rosario-6330741b2/"> LinkedIn </a> </p>
+        <p class="indent"> <a href="/content/resume.pdf"> Curriculum Vitae (CV) </a> </p>
+        <p class="indent"> <a href="/content/math/"> Math </a> </p>
+        <p class="indent"> <a href="/content/journal"> Journal </a> </p>
+        <p class="indent"> <a href="/content/courseload"> Courseload </a> </p>
+        <p class="indent"> <a href="/content/contact"> Contact </a> </p>
+    </div>
+    <footer> <h6> Too <b id="brightness_1">bright?</b> Toggle <button onclick="ToggleDarkMode()" id="brightness_2"> dark mode. </button> </h6> </footer>    
+    <script src="/js/main.js"></script>
+</body>
