@@ -1,0 +1,185 @@
+body {
+  overflow: hidden;
+  background-color: #010101;
+
+}
+
+#cursor {
+  backface-visibility: hidden;
+  z-index: 100000;
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  border: 10px solid white;
+  transition: 0s;
+  border-radius: 100%;
+  pointer-events: none;  
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cursor::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+
+.vis-background-wrapper {
+  background-color: #010101;
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 4000px;
+  perspective: 4000px;
+  height: 100%;
+}
+
+.vis-floating-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  height: 100%
+}
+.vis-floating-background.is-absolute {
+  position: absolute;
+}
+.vis-floating-background img {
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.vis-floating-background img:first-child {
+  -webkit-transform: translateZ(-200px);
+  -ms-transform: translateZ(-200px);
+  transform: translateZ(-200px);
+  width: 100%;
+}
+.vis-floating-background img:first-child:hover {
+  -webkit-filter: invert(0);
+  /* -ms-transform: invert(1); does not exist!*/
+  filter: invert(0);
+}
+
+
+#icon {
+  -webkit-animation: glow 3s infinite alternate;
+  animation: glow 3s infinite alternate; 
+  border-radius: 150%; 
+}
+
+#icon:hover {
+  -webkit-animation: has_link_hover 1s infinite alternate;
+  animation: has_link_hover 1s infinite alternate; 
+  border-radius: 150%;  
+}
+
+#icon:active {
+  -webkit-animation: on_click 3s infinite;
+  animation: on_click 1s normal; 
+  border-radius: 150%; 
+}
+
+.vis-floating-background img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(-50px);
+  -ms-transform: translateZ(-50px);
+  transform: translateZ(-50px);
+}
+
+.vis-floating-background img:not(:first-child):hover {
+  -webkit-animation: hovering 1s infinite alternate;
+  animation: hovering 1s infinite alternate; 
+}
+
+.no-preserve-3d .vis-floating-background {
+  /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
+  position: relative;
+}
+
+@-webkit-keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 10px -3px black;
+    box-shadow: 0 0 10px -3px black;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 1px #b6dbe6;
+    box-shadow: 0 0 10px 1px #b6dbe6;
+  }
+}
+
+@keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 10px -3px black;
+    box-shadow: 0 0 10px -3px black;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 1px #b6dbe6;
+    box-shadow: 0 0 10px 2px #b6dbe6;
+  }
+}
+
+@-webkit-keyframes has_link_hover {
+  from {
+    -webkit-box-shadow: 0 0 10px -3px black;
+    box-shadow: 0 0 10px -3px black;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 2px #f3e0a1;
+    box-shadow: 0 0 10px 4px #f3e0a1;
+
+  }
+}
+
+@keyframes has_link_hover {
+  from {
+    -webkit-box-shadow: 0 0 10px -3px black;
+    box-shadow: 0 0 10px -3px black;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 2px #f3e0a1;
+    box-shadow: 0 0 10px 4px #f3e0a1;
+  }
+}
+
+@-webkit-keyframes hovering {
+  from {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+  to {
+    -webkit-filter: invert(0.35);
+            filter: invert(0.35);
+  }
+}
+@keyframes hovering {
+  from {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+  to {
+    -webkit-filter: invert(0.35);
+            filter: invert(0.35);
+  }
+}
+
+@keyframes onclick {
+  from {
+    filter: none
+  }
+  to {
+    filter: brightness(0%)
+  }}

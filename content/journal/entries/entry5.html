@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jon's online website">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <title> Jon Rosario's Website </title>
+
+    </head>
+<body>
+    <div class="main">
+        <h1> Jon Rosario's Journal. </h1>
+        <h3> Unique Numbers Algorithm [WIP] </h3>
+        <h4> April 6, 2021 </h4>
+        <p> I worked on writing an algorithm that would generate a set of positive integers {n<sub>1</sub>, n<sub>2</sub>, ..., n<sub>k</sub>}
+            that would satisfy follow criteria: </p>
+        <p class="indent"> 1. n<sub>i</sub> > n<sub>i-1</sub> </p>
+        <p class="indent"> 2. Each number n<sub>i</sub> is not repeated in the set </p>
+        <p class="indent"> 3. Each number n<sub>i</sub> cannot be recreated by summing any combination  
+            of the previous numbers {n<sub>1</sub>, n<sub>2</sub>, ..., n<sub>k</sub>} </p>
+        <p> An example of such a set of numbers is {1, 2, 4}. Each sequential number is increasing, 
+            there are no repeats, and you cannot make a number from summation of the previous numbers 
+            in the set (4 is not equal to 2+1). </p>
+
+        <p> In reality, the reason for this was mostly curiousity resulting from social media. 
+            On social media, there a popular game where people will give a list of actions, 
+            and for each that you have (or haven't) done, you will add a point value to your "score".
+            A player will post their resulting score, but others will not know which actions gave them points. 
+            Example is shown below: </p>
+
+        <img src="/content/journal/entries/files/never_have_i_ever.png">
+
+        <p> I was interested in whether there is a set of point values you can associate to each action, 
+            and thus be able to figure out exactly what actions a player picked. I split the problem into three parts: </p>
+
+        <p class="indent"> 1. Writing up a way to check if a single number could be made from ANY possible sum of a list of integers </p>
+        <p class="indent"> 2. Checking if a set of integers satisfied the above condition for every sequential number and it's subset of integers preceding it in the original set.   </p>
+        <p class="indent"> Easily generating a list of random numbers satisifying these conditions </p>
+        
+        <p> Today, I did the first two using these two functions. o_check corresponds to 1.
+            It returns a list of possible ways to add up to a given number "points" given a 
+            dictionary of actions mapped onto point values {str:int}. is_unique_map corresponds to 2.
+            It returns a boolean value (True = dictionary satisfies conditions/ False = fails conditions), 
+            and a list of combinations that would cause in_unique_map to return a False using o_check. </p>
+        <img src="/content/journal/entries/files/ocheck_and_isuniquemap.png">
+        <p> I still haven't gotten to the third part, but that's because I want to figure out an efficient method 
+            of generating numbers that isn't too intensive. </p>
+
+        <p> That's all for now, thanks for reading!</p>
+    </div>
+
+
+    <div class="sidebar"> 
+        <h2> Links: </h2>
+        <p class="indent"> <a href="/"> Homepage </a> </p>
+        <p class="indent"> <a href="https://github.com/triviajon"> GitHub </a> </p>
+        <p class="indent"> <a href="https://www.linkedin.com/in/jon-rosario-6330741b2/"> LinkedIn </a> </p>
+        <p class="indent"> <a href="/content/resume.pdf"> Curriculum Vitae (CV) </a> </p>
+        <p class="indent"> <a href="/content/journal"> Journal </a> </p>
+        <p class="indent"> <a href="/content/courseload"> Courseload </a> </p>
+        <p class="indent"> <a href="/content/contact"> Contact </a> </p>
+    </div>
+    <footer> <h6> Too <b id="brightness_1">bright?</b> Toggle <button onclick="ToggleDarkMode()" id="brightness_2"> dark mode. </button> </h6> </footer>    
+    <script src="/js/main.js"></script>
+</body>

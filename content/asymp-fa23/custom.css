@@ -1,0 +1,16 @@
+#list > p {
+    background-color: #dfdfdf;
+    padding: 5px;
+    margin: 5px;
+}
+    
+#list > p.active {
+    font-weight: bold;
+}
+
+#list > p > span {
+    padding: 0 10px;
+    margin-right: 10px;
+    background-color: rgba(207, 207, 207, 0.4);
+    cursor: pointer;
+}

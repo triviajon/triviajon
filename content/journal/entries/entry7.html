@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jon's online website">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <title> Jon Rosario's Website </title>
+
+    </head>
+<body>
+    <div class="main">
+        <h1> Jon Rosario's Journal. </h1>
+        <h3> Discord Bot Update -- Jonbot </h3>
+        <h4> January 5, 2022 </h4>
+        <p> Back in April, I decided to make my first bot on Discord, the popular messaging app. 
+            Since then, I have upgraded it into a full fledged Discord bot with features comparable 
+            to those run by longtime developers. Developed in Python, it includes a leveling system 
+            and leaderboards, a database for storage of "lore" messages and image attachments, 
+            games, and several fun features. </p>
+        <img src="/content/journal/entries/files/jonbot_features.png">
+        <p> The most innovative feature I'd like to talk about is the implementation of the "lore".
+            My group of friends have lots of shared stories and wanted a centralized database of these stories. 
+            By using the *lore command, users can add their stories and image attachments to the database. 
+            Images are hashed using the following algorithm: </p>
+        <img src="/content/journal/entries/files/image_hashing_algo.png">
+        <p> Thus, users and make lookups using any similar looking image. 
+            In fact, images are compared using the bitwise difference of the hashes of the image derivatives,
+            users can even make "stickfigure" drawings from memory and return the proper lore lookup with good accuracy!
+            More info can be found on my Github. Thanks for reading!
+
+        </p>
+    </div>
+
+
+    <div class="sidebar"> 
+        <h2> Links: </h2>
+        <p class="indent"> <a href="/"> Homepage </a> </p>
+        <p class="indent"> <a href="https://github.com/triviajon"> GitHub </a> </p>
+        <p class="indent"> <a href="https://www.linkedin.com/in/jon-rosario-6330741b2/"> LinkedIn </a> </p>
+        <p class="indent"> <a href="/content/resume.pdf"> Curriculum Vitae (CV) </a> </p>
+        <p class="indent"> <a href="/content/journal"> Journal </a> </p>
+        <p class="indent"> <a href="/content/courseload"> Courseload </a> </p>
+        <p class="indent"> <a href="/content/contact"> Contact </a> </p>
+    </div>
+    <footer> <h6> Too <b id="brightness_1">bright?</b> Toggle <button onclick="ToggleDarkMode()" id="brightness_2"> dark mode. </button> </h6> </footer>    
+    <script src="/js/main.js"></script>
+</body>
