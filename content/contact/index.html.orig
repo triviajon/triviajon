@@ -1,0 +1,83 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jon's online website">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <title> Jon Rosario's Website </title>
+
+    </head>
+<body>
+    <div class="main">
+        <h1> Contact Jon Rosario. </h1>
+        <h3> If you would like to contact me for anything, feel free to shoot me an email. </h3>
+        <p> Emails are definitely preferred. </p>
+        <h4> Formal Contact: </h4>
+        <p class="indent"> Email: jonros <i>&#60;at&#62;</i> mit <i>&#60;dot&#62;</i> edu </p>
+        <p class="indent"> Phone: (862) two four one - 3293 </p>
+
+        <h4> Informal Contact: </h4>
+        <p class="indent"> Instagram: <a href="https://instagram.com/triviajon">@triviajon</a> </p>
+        <img src="/images/jon_hiking.jpg" style="width: 80%;" class="no_invert">
+    </div>
+
+
+    <div class="sidebar"> 
+        <h2> Links: </h2>
+        <p class="indent"> <a href="/"> Homepage </a> </p>
+        <p class="indent"> <a href="https://github.com/triviajon"> GitHub </a> </p>
+        <p class="indent"> <a href="https://www.linkedin.com/in/jon-rosario-6330741b2/"> LinkedIn </a> </p>
+        <p class="indent"> <a href="/content/resume.pdf"> Curriculum Vitae (CV) </a> </p>
+        <p class="indent"> <a href="/content/journal"> Journal </a> </p>
+        <p class="indent"> <a href="/content/courseload"> Courseload </a> </p>
+        <p class="indent"> <a href="/content/contact"> Contact </a> </p>
+    </div>
+    <footer> <h6> Too <b id="brightness_1">bright?</b> Toggle <button onclick="ToggleDarkMode()" id="brightness_2"> dark mode. </button> </h6> </footer>    
+    <script src="/js/main.js"></script>
+</body>
+||||||| empty tree
+=======
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jon's online website">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <title> Jon Rosario's Website </title>
+
+    </head>
+<body>
+    <div class="main">
+        <h1> Contact Jon Rosario. </h1>
+        <h3> If you would like to contact me for anything, feel free to shoot me an email. </h3>
+        <p> Emails are definitely preferred. </p>
+        <h4> Formal Contact: </h4>
+        <p class="indent"> Email: jonros <i>&#60;at&#62;</i> mit <i>&#60;dot&#62;</i> edu </p>
+        <p class="indent"> Phone: (862) two four one - 3293 </p>
+
+        <h4> Informal Contact: </h4>
+        <p class="indent"> Instagram: <a href="https://instagram.com/triviajon">@triviajon</a> </p>
+        <img src="/images/jon_hiking.jpg" style="width: 80%;">
+    </div>
+
+
+    <div class="sidebar"> 
+        <h2> Links: </h2>
+        <p class="indent"> <a href="/"> Homepage </a> </p>
+        <p class="indent"> <a href="https://github.com/triviajon"> GitHub </a> </p>
+        <p class="indent"> <a href="https://www.linkedin.com/in/jon-rosario-6330741b2/"> LinkedIn </a> </p>
+        <p class="indent"> <a href="/content/resume.pdf"> Curriculum Vitae (CV) </a> </p>
+        <p class="indent"> <a href="/content/math/"> Math </a> </p>
+        <p class="indent"> <a href="/content/journal"> Journal </a> </p>
+        <p class="indent"> <a href="/content/courseload"> Courseload </a> </p>
+        <p class="indent"> <a href="/content/contact"> Contact </a> </p>
+    </div>
+    <footer> <h6> Too <b id="brightness_1">bright?</b> Toggle <button onclick="ToggleDarkMode()" id="brightness_2"> dark mode. </button> </h6> </footer>    
+    <script src="/js/main.js"></script>
+</body>
+>>>>>>> 4646bde0df6200400ed01406dc5e3d66cd33c576
