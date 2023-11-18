@@ -1,4 +1,4 @@
-body { 
+body {
     background-color: whitesmoke;
     font-size: 18px;
     color: #444;
@@ -12,11 +12,17 @@ body {
 }
 
 .dark-body {
-    color:rgba(255, 255, 255, 0.753);
+    color: rgba(255, 255, 255, 0.753);
     background-color: #121212;
 }
 
 .invertible {
+    @media only screen and (max-width: 600px) {
+        .main {
+            margin: 40px auto; /* Adjust the margin or padding of the main content as needed */
+        }
+    }
+
     filter: invert(90%);
 }
 
@@ -25,25 +31,32 @@ body {
     width: 10%;
     height: 100%;
     top: 25%;
-    padding: 0 10%;
+    padding: 0 0;
 }
 
-@media only screen and (max-width: 767px) {
-    h1, h4 {
+@media only screen and (max-width: 1024px) {
+    .main {
+        margin: 20px auto; /* Adjust the margin for medium-sized screens */
+        padding: 0 10px; /* Adjust the padding for medium-sized screens */
+    }
+    .sidebar {
+        display: none;
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust the font size for medium-sized screens */
+    }
+
+    h4.indent2 {
+        margin-left: 40px; /* Adjust the margin for medium-sized screens */
+        font-size: 18px; /* Adjust the font size for medium-sized screens */
         line-height: 1;
     }
-    
-    .sidebar {
-        position:relative;
-        width: 10%;
-        height: 100%;
-        top: 25%;
-        padding: 0 10%;
-    }
-    footer {
-        opacity: 0;
-    }
-    
+}
+
+.top-bar {
+    padding: 10px;
+    text-align: center;
 }
 
 .indent {
@@ -56,11 +69,11 @@ body {
 
 .listshort {
     margin: 0;
-    line-height: 1.4
+    line-height: 1.4;
 }
 
 h1, h4 {
-    line-height: .3;
+    line-height: 0.3;
 }
 
 h2 {
@@ -91,13 +104,27 @@ button {
 }
 
 footer {
-    display:flex;
+    display: flex;
     position: fixed;
     bottom: 0;
     left: 10%;
     right: 0;
-    height: 5%;
-    justify-content:left;
-    align-items:center;
+    height: 3%;
+    justify-content: left;
+    align-items: center;
 }
 
+.bottom-nav {
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.bottom-nav a {
+    color: rgb(148, 81, 114);
+    text-decoration: none;
+    display: inline-block; /* Display links as inline-block elements */
+    margin-right: 5px; /* Adjust the margin between links as needed */
+}
+
+.bottom-nav a:hover {
+    text-decoration: underline;
+}
