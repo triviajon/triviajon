@@ -1,0 +1,51 @@
+body {
+    background-color: whitesmoke;
+    font-size: 18px;
+    color: #444;
+}
+
+.main {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+h1 {
+    line-height: 1;
+}
+
+a {
+    color: rgb(148, 81, 114);
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+button {
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #444;
+    background-color: rgba(18, 18, 18, 0);
+    color: rgb(148, 81, 114);
+}
+
+#list > p {
+    background-color: #dfdfdf;
+    padding: 5px;
+    margin: 5px;
+}
+    
+#list > p.active {
+    font-weight: bold;
+}
+
+#list > p > span {
+    padding: 0 10px;
+    margin-right: 10px;
+    background-color: rgba(207, 207, 207, 0.4);
+    cursor: pointer;
+}
