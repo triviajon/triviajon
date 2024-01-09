@@ -1,0 +1,32 @@
+.tag-filter {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px;
+    background-color: #e0e0e0; /* Set your desired background color */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tag-filter.selected {
+    background-color: #b0b0b0; /* Set your desired darker background color for selected tags */
+}
+
+.tag-filter span {
+    margin-right: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.tag-filters #music {
+    background-color: #9dacc2;
+}
+
+.tag-filters #journals {
+    background-color: #bda78e;
+}
+
+.tag-filters #publications {
+    background-color: #82b9ba;
+}

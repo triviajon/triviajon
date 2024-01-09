@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jon's online website">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="./custom.css">
+        <script src="./script.js"></script>"
+        <title> Jon Rosario's Website </title>
+        
+    </head>
+<body>
+    <div class="main">
+        <h1>Jon Rosario's Extras.</h1>
+        <h3>This is where I'll be uploading all of the content I want to make public that isn't necessarily code.</h3>
+        <h4>Feel free to filter by what is relevant for you.</h4>
+
+        <div class="tag-filters">
+            <div class="tag-filter" id="music" onclick="toggleTag(this)">
+                Music
+            </div>
+            <div class="tag-filter" id="journals" onclick="toggleTag(this)">
+                Journals
+            </div>
+            <div class="tag-filter" id="publications" onclick="toggleTag(this)">
+                Publications
+            </div>
+        </div>
+
+
+        <div id="article-list">
+            <div class="article" data-type="Music">
+                <h4>Music 1</h4>
+            </div>
+            <div class="article" data-type="Music">
+                <h4>Publication 1</h4>
+            </div>
+            <div class="article" data-type="Music">
+                <h4>Music 2</h4>
+            </div>
+            <div class="article" data-type="Music">
+                <h4>Journal 1</h4>
+            </div>
+            <div class="article" data-type="Music">
+                <h4>Journal 2</h4>
+            </div>
+            <div class="article" data-type="Music">
+                <h4>Music 3</h4>
+            </div>
+        </div>
+
+        <iframe src="../../bottom_nav.html" frameborder="0" scrolling="no" style="width:100%; height:5vh;" class=""></iframe>
+        <br>
+    </div>
+
+
+    <iframe src="../../sidebar.html" frameborder="0" scrolling="no" style="width:15%; height:100vh; position:fixed; top:0; left:0;" class="sidebar"></iframe>
+
+    <footer> <h6> Too <b id="brightness_1">bright?</b> Toggle <button onclick="ToggleDarkMode()" id="brightness_2"> dark mode. </button> </h6> </footer>    
+    <script src="/js/main.js"></script>
+</body>
