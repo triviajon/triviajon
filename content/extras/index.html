@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="./custom.css">
-        <script src="./script.js"></script>"
+        <link rel="stylesheet" href="fa/css/fontawesome.css">
+        <link rel="stylesheet" href="fa/css/solid.css">
+        <script src="./script.js"></script>
         <title> Jon Rosario's Website </title>
         
     </head>
@@ -15,39 +17,72 @@
     <div class="main">
         <h1>Jon Rosario's Extras.</h1>
         <h3>This is where I'll be uploading all of the content I want to make public that isn't necessarily code.</h3>
-        <h4>Feel free to filter by what is relevant for you.</h4>
+        <h3>Feel free to filter by what is relevant for you.</h4>
 
         <div class="tag-filters">
             <div class="tag-filter" id="music" onclick="toggleTag(this)">
+                <i class="fas fa-music"></i>
                 Music
             </div>
-            <div class="tag-filter" id="journals" onclick="toggleTag(this)">
+            <div class="tag-filter" id="journal" onclick="toggleTag(this)">
+                <i class="fas fa-pencil"></i>
                 Journals
             </div>
-            <div class="tag-filter" id="publications" onclick="toggleTag(this)">
+            <div class="tag-filter" id="published" onclick="toggleTag(this)">
+                <i class="fas fa-book"></i>
                 Publications
+            </div>
+            <div class="tag-filter" id="code" onclick="toggleTag(this)">
+                <i class="fas fa-code"></i>
+                Code
             </div>
         </div>
 
 
         <div id="article-list">
-            <div class="article" data-type="Music">
-                <h4>Music 1</h4>
+
+
+
+            <div class="article" data-types="music">
+                <h4><a href="music/counting_stars.html"> [11/2023] Performance of "Counting Stars" </a></h4>
             </div>
-            <div class="article" data-type="Music">
-                <h4>Publication 1</h4>
+
+
+            <div class="article" data-types="music">
+                <h4><a href="music/reflection.html"> [08/2023] Production of "Reflection" by the MIT Asymptones </a></h4>
             </div>
-            <div class="article" data-type="Music">
-                <h4>Music 2</h4>
+
+            <div class="article" data-types="published">
+                <h4><a href="https://ieeexplore.ieee.org/abstract/document/10281744"> [07/2023] Assessment of Terrain Dependence of Radiometric Terrain Corrected C-Band Sentinel-1 SAR Backscatter over Different Target Types </a></h4>
             </div>
-            <div class="article" data-type="Music">
-                <h4>Journal 1</h4>
+
+            <div class="article" data-types="published">
+                <h4><a href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.G41A..08S/abstract"> [12/2022] OPERA RTC Product, Algorithm, and Validation Approach </a></h4>
             </div>
-            <div class="article" data-type="Music">
-                <h4>Journal 2</h4>
+
+            <div class="article" data-types="journal">
+                <h4><a href="entries/entry8.html"> [02/22] DRP Presentation</a></h4>
             </div>
-            <div class="article" data-type="Music">
-                <h4>Music 3</h4>
+            <div class="article" data-types="journal code">
+                <h4><a href="entries/entry7.html"> [01/22] Discord Bot Update -- Jonbot</a></h4>
+            </div>
+            <div class="article" data-types="journal code">
+                <h4><a href="entries/entry6.html"> [09/21] Glaciers@MIT Internship</a></h4>
+            </div>
+            <div class="article" data-types="journal code">
+                <h4><a href="entries/entry5.html"> [04/21] Unique Numbers Algorithm [WIP]</a></h4>
+            </div>
+            <div class="article" data-types="journal code">
+                <h4><a href="entries/entry4.html"> [04/21] April Fool's Day "resrever" Discord Bot</a></h4>
+            </div>
+            <div class="article" data-types="journal code">
+                <h4><a href="entries/entry3.html"> [03/21] Simulating a basic Mass-Spring System using VPython</a></h4>
+            </div>
+            <div class="article" data-types="journal code">
+                <h4><a href="entries/entry2.html"> [01/21] Tomodachi Life Reverse Engineering Algorithm in Python</a></h4>
+            </div>
+            <div class="article" data-types="journal">
+                <h4><a href="entries/entry1.html"> [12/20] 1.008 Final Project</a></h4>
             </div>
         </div>
 

@@ -1,32 +1,61 @@
 .tag-filter {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px;
-    background-color: #e0e0e0; /* Set your desired background color */
-    border-radius: 5px;
-    cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	padding: 8px;
+	background-color: #d0d0d0 ;
+	border-radius: 5px;
+	cursor: pointer
 }
-
 .tag-filter.selected {
-    background-color: #b0b0b0; /* Set your desired darker background color for selected tags */
+	background-color: #b0b0b0 !important
 }
-
 .tag-filter span {
-    margin-right: 5px;
-    vertical-align: middle;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
+	margin-right: 5px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 10px;
+	height: 10px
 }
-
+.tag-filters {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px
+}
 .tag-filters #music {
-    background-color: #9dacc2;
+	background-color: #9dacc2
 }
-
-.tag-filters #journals {
-    background-color: #bda78e;
+.tag-filters #journal {
+	background-color: #bda78e
 }
-
-.tag-filters #publications {
-    background-color: #82b9ba;
+.tag-filters #published {
+	background-color: #82b9ba
+}
+.tag-filters #code {
+	background-color: #a87cb2
+}
+h4 {
+	display: inline;
+	margin-right: 10px
+}
+.icon {
+	margin-left: 5px;
+	display: inline-block
+}
+[data-type="journal"] {
+	color: #bda78e
+}
+[data-type="published"] {
+	color: #82b9ba
+}
+[data-type="music"] {
+	color: #9dacc2
+}
+#article-list {
+	margin-top: 10px
+}
+.article {
+	margin-bottom: 2px
+}
+#article-list .article:last-child {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px
 }
