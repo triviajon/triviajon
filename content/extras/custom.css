@@ -2,12 +2,9 @@
 	display: inline-block;
 	margin-right: 10px;
 	padding: 8px;
-	background-color: #d0d0d0 ;
+	background-color: #d0d0d0;
 	border-radius: 5px;
 	cursor: pointer
-}
-.tag-filter.selected {
-	background-color: #b0b0b0 !important
 }
 .tag-filter span {
 	margin-right: 5px;
@@ -20,16 +17,17 @@
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 15px
 }
-.tag-filters #music {
+
+.tag-filters #music.selected {
 	background-color: #9dacc2
 }
-.tag-filters #journal {
+.tag-filters #journal.selected {
 	background-color: #bda78e
 }
-.tag-filters #published {
+.tag-filters #published.selected {
 	background-color: #82b9ba
 }
-.tag-filters #code {
+.tag-filters #code.selected {
 	background-color: #a87cb2
 }
 h4 {

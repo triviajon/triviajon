@@ -41,7 +41,7 @@ function filterArticles() {
     articles.forEach(article => {
         const articleTypes = article.getAttribute('data-types').split(' ');
         console.log(article, articleTypes);
-        const displayArticle = selectedTags.length === 0 || selectedTags.some(tag => articleTypes.includes(tag));
+        const displayArticle = selectedTags.some(tag => articleTypes.includes(tag));
         article.style.display = displayArticle ? 'block' : 'none';
     });
 }
