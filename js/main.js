@@ -23,7 +23,11 @@ function ToggleDarkMode() {
   var images = document.getElementsByTagName("img");
   var i;
   for (i = 0; i < images.length; i++) {
-    images[i].classList.toggle("invertible");
+    if (images[i].classList.contains("no_invert")) {
+      images[i].classList.remove("invertible");
+    } else {
+      images[i].classList.toggle("invertible");
+    }
   }
 
   if (localStorage.getItem("dark_mode_status") === "off") {
@@ -43,7 +47,7 @@ function ToggleDarkMode() {
       iframe.contentDocument || iframe.contentWindow.document;
     iframeDocument.body.classList.toggle("dark-body");
 
-    console.log(iframeDocument)
+    console.log(iframeDocument);
 
     var iframeImages = iframeDocument.getElementsByTagName("img");
     for (i = 0; i < iframeImages.length; i++) {
