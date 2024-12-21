@@ -8,7 +8,9 @@ if (dark_mode_status === "on") {
   var i;
   console.log(images);
   for (i = 0; i < images.length; i++) {
-    if (!("no_invert" in images[i].classList)) {
+    if (images[i].classList.contains("no_invert")) {
+      images[i].classList.remove("invertible");
+    } else {
       images[i].classList.toggle("invertible");
     }
   }

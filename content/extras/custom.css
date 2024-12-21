@@ -4,7 +4,7 @@
 	padding: 8px;
 	background-color: #d0d0d0;
 	border-radius: 5px;
-	cursor: pointer
+	cursor: pointer;
 }
 .tag-filter span {
 	margin-right: 5px;
@@ -15,7 +15,8 @@
 }
 .tag-filters {
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 15px
+	padding-bottom: 15px;
+	text-align: center;
 }
 
 .tag-filters #music.selected {

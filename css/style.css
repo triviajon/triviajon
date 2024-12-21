@@ -1,6 +1,6 @@
 body {
     background-color: whitesmoke;
-    font-size: 18px;
+    font-size: 16px;
     color: #444;
 }
 
@@ -13,7 +13,7 @@ body {
 
 .dark-body {
     color: rgba(255, 255, 255, 0.753);
-    background-color: #121212;
+    background-color: #191919;
 }
 
 .invertible {
@@ -72,17 +72,20 @@ body {
     line-height: 1.4;
 }
 
-h1, h4 {
-    line-height: 0.3;
+h1 {
+    font-size: 28px;
+    line-height: 0.5;
 }
 
 h2 {
-    line-height: 1.0;
+    font-size: 24px;
+    line-height: 0.5;
 }
 
 h3 {
-    line-height: 1.0;
-    font-weight: 1;
+    font-size: 20px;
+    line-height: 0.5;
+
 }
 
 a {
@@ -91,7 +94,6 @@ a {
 }
 
 p {
-    font-size: 16px;
     line-height: 1.2;
 }
 
