@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+
+  <style>
+    figure img {
+      max-width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+      transform-origin: center;
+    }
+
+    figure img:hover {
+      transform: scale(1.2);
+      cursor: zoom-in;
+    }
+  </style>
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Jon Rosario</strong> — <em>jonros [at] mit [dot] edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Transit-Oriented Development</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>What is the relationship between single-family zoning and income across Greater Boston?</li>
+				<li>Do Greater Boston communities with more diverse racial demographics have a lower percentage of single-family zoning?</li>
+				<li>Are there non-MBTA Communities that have zoning patterns and demographic characteristics similar to MBTA Communities?</li>
+			</ol>
+
+			My questions were geared towards gaining a basic understanding of housing statistics in Greater Boston, as I have never investigated this sort of data before.
+		</section>
+
+		<section>
+			<h2>Dataset</h2>
+			<p>
+				The dataset used was the "Single family zoning vs other housing zoning in Metro Boston" dataset. 
+				It contains spatial and tabular data on zoning classifications across 101 municipalities in the MAPC region, distinguishing between single-family zoning and other housing types. 
+				This dataset consists of two key components: zoning data exclusively focused on housing zones, and demographic and income data. 
+			</p>
+			<p>
+				It's important to note that some municipalities have two entries, one for single-family zoning and another for other residential zoning. 
+				This necessitated a significant amount of data wrangling to be done, which is expanded on later. 
+			</p>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+			<p> I investigated each of my analysis questions sequentially. Starting with the first: </p>
+
+			<em> What is the relationship between single-family zoning and income across Greater Boston? </em>
+
+			<p> The short explainer I read mentions the 3V framework for TOD, which includes market potential value as one of the V's. Thus, it might be interesting to see whether municipalities with a higher proportion of single-family zoning are associated with higher median incomes-- which might indicate exclusionary zoning practices. </p>
+
+			<p> To start, it made sense to explore the dataset and get a basic sense of what household income and single-family zoning looked like across Greater Boston. Note that all images can be clicked on to get the full resolution. </p>
+
+			<figure>
+				<a href="Average_Household_Income.png"><img src="Average_Household_Income.png" alt="" style="max-width: 100%;"/></a>
+				<figcaption>
+				A geographic map of the Metro Boston area. Municipalities without geometries defined in the dataset provided are not shown. 
+				Municipalities are colored based on the average household income. 
+				All values shown are estimated, as the dataset only provides number of households in an income range. 
+				Thus, the midpoint of each income range is used for each calculation. 
+				Municipalities with multiple entries in the provided dataset are averaged together and weighted according to number of households in each entry. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<a href="Single_Family_Homes_By_Muni.png"><img src="Single_Family_Homes_By_Muni.png" alt="" style="max-width: 100%;"/></a>				<figcaption>
+					A geographic map of the Metro Boston area. Municipalities without geometries defined in the dataset provided are not shown. 
+					Municipalities are colored based on the percentage of single family homes reported.
+					Municipalities with multiple entries in the provided dataset are averaged together and weighted according to number of households in each entry. 
+				</figcaption>
+			</figure>
+
+			<p>While the geographic maps were interesting to look at, they simply did not provide enough information to answer the question. I'm looking to see if there
+			is any correlation between % of single family homes and household income, so a standard scatter plot should do the trick. Additionally, I'm restricted
+			by using the geographic maps, as I realized that the geometries provided in the dataset are incomplete.</p>  
+
+			<figure>
+				<a href="Household_Income_Vs_Single_Family_Homes.png"><img src="Household_Income_Vs_Single_Family_Homes.png" alt="" style="max-width: 100%;"/></a>
+				<figcaption> 
+					A scatterplot displaying the relationship between the average percentage of single-family zoning and the average household income across municipalities in the Metro Boston area. 
+					Each point represents a municipality, with labels indicating the municipality name. The linear trend line suggests a positive correlation, with statistical significance at p ≤ 0.05. 
+					Values are calculated using household income ranges as described previously. Municipalities with multiple zoning entries are averaged and weighted accordingly. </figcaption>
+			</figure>
+
+			<p>This gave me enough information to conclude that there is likely a correlation between single-family zoning and income across Greater Boston. From here, I moved onto my next question: </p>
+
+			<em>Do Greater Boston communities with more diverse racial demographics have a lower percentage of single-family zoning?</em>
+
+			<p> As explained in the subtheme page, restrictive zoning policies, such as single-family-only zoning, have been historically linked to racial and economic segregation. Studying this question would just provide me with better understanding of how these two relate.  </p>
+
+			I started by investigating the diversity breakdown of the municipalities provided in the dataset. Most municipalities provided this data, in the form of population counts for the following categories:
+			<ul>
+				<li> Non-Hispanic White </li>
+				<li> Non-Hispanic Black/African American </li>
+				<li> Non-Hispanic American Indian/Alaska Native </li>
+				<li> Non-Hispanic Asian </li>
+				<li> Non-Hispanic Pacific Islander/Native Hawaiian </li>
+				<li> Non-Hispanic Other </li>
+				<li> Non-Hispanic Multi-Race </li>
+				<li> Hispanic/Latino </li>
+			</ul>
+
+			Some municipalities provided separate data for single-family housing zones vs other housing zones, but most did not. I started by examining the racial breakdown of the Metro boston municipalities alone.
+
+			<figure>
+				<a href="Diversity_Breakdown.png"><img src="Diversity_Breakdown.png" alt="" style="max-width: 100%;"/></a>
+				<figcaption>
+					A stacked bar chart showing the distribution of Latino, White, and Non-Hispanic Non-White populations across municipalities, separating single family zones and other zones. 
+					Colors indicate population groups, with values representing the number of individuals in each category. Chart is abridged. 
+				</figcaption>
+			</figure>
+
+			However, this felt like an ineffective way of understanding diversity. Additionally, it was far too much information to be useful. Instead, I looked for other ways to measure diversity of a community.
+			This lead me to a concept borrowed from biology known as <a href="https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/22%3A_Biodiversity/22.02%3A_Diversity_Indices#Simpson.E2.80.99s_Index">Simpson's Index</a>.
+			While not a perfect measure, it would be more than adequate for an initial analysis. 
+
+			<figure>
+				<a href="Muni_vs_div_index_sorted_by_single_family.png"><img src="Muni_vs_div_index_sorted_by_single_family.png" alt="" style="max-width: 100%;"/></a>
+				<figcaption>
+					A bar chart showing the Diversity Index for each municipality, with colors indicating the average percentage of single-family homes. 
+					Only municipalities with populations between above 500 are included. 
+					The Diversity Index is calculated based on the distribution of racial and ethnic groups within each municipality, with a higher score indicating a more diverse populace. 
+					Additionally, the bars are sorted by percentage of zones for single-family homes. 
+				</figcaption>
+			</figure>
+
+			This provided a decent amount of information, but I still desired a more straightforward visualization which demonstrated 
+
+			<figure>
+				<a href="diversity_index_35.png"><img src="diversity_index_35.png" alt="" style="max-width: 100%;"/></a>
+				<figcaption>
+					A bubble chart of municipalities filtered to non-single family zoning. Bubble size represents the total number of households, while color indicates the Diversity Index. 
+					Colored bubbles indicate a diversity index of at least 0.35. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<a href="diversity_index_50.png"><img src="diversity_index_50.png" alt="" style="max-width: 100%;"/></a>
+				<figcaption>
+					A bubble chart of municipalities filtered to non-single family zoning. Bubble size represents the total number of households, while color indicates the Diversity Index. 
+					Colored bubbles indicate a diversity index of at least 0.5. 
+				</figcaption>
+			</figure>
+
+			<p>One thing that is often overlooked is that people look to form communities, especially with those who share an identity similar to their own. That being said, these
+			figures show a lack of diverse communities in the Metro Boston area. Finally, I moved onto my last question. </p>
+
+
+			<em>Are there non-MBTA Communities that have zoning patterns and demographic characteristics similar to MBTA Communities?</em>
+
+			<p>The MBTA Communities Act aims to ensure that municipalities allow multifamily housing, but it's worth examining whether some municipalities that are not officially designated as MBTA Communities still share similar zoning and demographic profiles. 
+				This could help identify areas that might also benefit from TOD-style policies but are currently overlooked.</p>
+
+			<figure>
+				<a href="characteristics.png"><img src="characteristics.png" alt="" /></a>
+				<figcaption>
+					A scatterplot of municipalities comparing estimated mean household income and the Diversity Index. 
+					Color represents the percentage of single-family homes, while size and shape indicate MBTA community status.
+				</figcaption>
+			</figure>
+
+			This figure does indicate that there is something interesting about non-MBTA Communities, but without more information, it's hard to make any conclusive judgements, so I left it at just this figure. 
+
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>In this exploratory data analysis, I examined the relationship between zoning patterns, income, and demographic diversity in Greater Boston. 
+				I first explored the data to assess data quality and structure in order to create accurate aggregation of municipal-level statistics. 
+				Our findings indicate a positive correlation between single-family zoning and higher household income, suggesting exclusionary zoning effects. 
+				We also observe that municipalities with greater racial diversity tend to have lower percentages of single-family zoning. 
+				Finally, we explore whether non-MBTA communities share similar zoning and demographic characteristics with MBTA communities, identifying potential candidates for transit-oriented development policies. 
+				However, we are unable to make conclusive judgements on these communities without more data. </p>
+		</section>
+	</main>
+</body>
+</html>
