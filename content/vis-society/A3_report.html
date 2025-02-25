@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+	<style>
+		figure img {
+		max-width: 100%;
+		display: block;
+		transition: transform 0.3s ease;
+		transform-origin: center;
+		}
+
+		figure img:hover {
+		transform: scale(1.2);
+		cursor: zoom-in;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Critique & Redesign
+		</h1>
+
+		<p>
+			<strong>Jon Rosario</strong> — <em>jonros@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Reading & Critique</h2>
+
+			<figure>
+				<img src="https://vis-society.github.io/assets/imgs/covid-spiral.png" alt="" />
+			</figure>
+
+			<p>
+				<b>Insights about the data/visualization:</b>
+			</p>
+
+			<ul>
+				<li>Covid-19 cases only really started in the United States in March 2020</li>
+				<li>In the summer months of 2020 (July and August), there was a small influx of covid-19 cases</li>
+				<li>Then again in November 2020-February 2021, there was a huge influx of Covid-19 cases. Possibly the largest number of new Covid-19 cases, though it's hard to compare.</li>
+				<li>There were nearly no new Covid-19 cases in the US in early-mid 2021, but then things dramatically picked up the pace in August all the way through to 2022.</li>
+			</ul>
+
+			<p>
+				<b>Design Critique:</b>
+			</p>
+
+			<p>
+				While I'm not a fan of the visualization as a whole, I believe it excels at delivering its message to its target audience. The target audience was the average New York Times reader, who at the time was likely focused on answering one question: how "bad" is the spread of Covid-19? In that regard, this visualization effectively conveys how "bad" that spread is. Quite literally, the visual encoding they use for Covid-19 cases is width: a natural choice, given what the reader truly means when they use the word spread. Additionally, the spiral format makes understanding this reasonably experiential. "How bad is Covid-19 right now? Oh, it's similar to this time last year."
+			</p>
+			<p>
+				That being said, I think this visualization fails in communicating scale. The first thing Western readers see is the legend in the top right, showing the width for 150K new Covid-19 cases. However, unlike in an architectural plan or a similar graph, there is no "tick mark." Once my eyes roll just four inches to the center of the graphic, I've lost all sense of scale. Additionally, due to the spiral structure, the data lacks alignment, making comparisons difficult. Finally, in my opinion, the graphic is highly misleading: it doesn’t track the total number of active Covid-19 cases but rather the number of new cases.
+			</p>
+		</section>
+
+		<section>
+			<h2>Visualization Sketches</h2>
+
+      <figure>
+				<img src="A3_1.png" alt="" />
+				<figcaption>
+					Cumulative Covid-19 cases in the United States starting from January 2020, where the number of confirmed cases is encoded by radius. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>One of the issues my critique raised was that the visualization felt misleading because it was reporting the number of new cases per day.</li>
+				<li>Attempted to fix this by instead plotting cumulative Covid-19 cases. However, by keeping the radial format and encoding the number of cases as radius, it makes it incredibly difficult to parse small increases in total number of cases.</li>
+				<li>Most people don't actively have Covid-19 forever, so a lot of what's being visualized feels like junk.</li>
+			</ul>
+
+			<figure>
+				<img src="A3_2.png" alt="" />
+				<figcaption>
+					New Covid-19 cased in the United States over 7-day averages, encoded by width and color.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li>Went back to the 7 day average.</li>
+				<li>Another issue that my critique mentioned was how difficult it was to make comparisons. </li>
+				<li>By adding a redundant encoding channel (color is tied to width), this should make comparisons much easier to make.</li>
+				<li>In a complete drawing, the full width would be colored.</li>
+			</ul>
+
+			<figure>
+				<img src="A3_3.png" alt="" />
+				<figcaption>
+					A line plot of new Covid-19 Cases in the US averaged weekly for the years 2020 and 2021. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>Wanted to align month-to-month to make comparisons easier</li>
+				<li>Could additionally make these comparisons easier by removing the spiral format. But in order to plot both years, need two line marks</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Final Visualization Design</h2>
+      
+			<figure>
+				<img src="A3_4.png" alt="" />
+				<figcaption>
+					Cumulative and weekly new cases of Covid-19 in the United States, roughly from January 2020 to March 2021. 
+				</figcaption>
+			</figure>
+
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+				When first glancing at my visualization, my hope is that the reader's eyes are drawn to the lines in early 2021. 
+				The goal of this visualization is to highlight the massive Covid-19 threat during that period. 
+				To achieve this, I'm intentionally using both color and line width along the y-axis to encode new confirmed Covid-19 cases. 
+				The white-to-red color scheme helps emphasize the intensity of the cases over time and draws the reader's attention. 
+				Additionally, the choice to average the data over 7-day periods showcases the overall trend, rather than distracting the reader with day-to-day fluctuations.
+			</p>
+
+			<h3>Reflection</h3>
+			<p>
+				One of the critiques I aimed to address was the issue of scale. 
+				To tackle this, I added color as a redundant encoding channel. 
+				That said, I also felt that the original visualization suffered from not effectively communicating the context of the total number of active cases. 
+				While including this was my original goal, it proved impossible with the dataset provided. 
+				As mentioned in the metadata, the cumulative sums drift away from the sum of all daily counts, since many authorities frequently change the criteria for counting Covid-19 cases. 
+				Ultimately, I had to focus on the total number of cases in my visualization, which provides some context but makes it harder for the reader to understand the scale at a glance.
+			</p>
+		</section>
+	</main>
+</body>
+</html>
