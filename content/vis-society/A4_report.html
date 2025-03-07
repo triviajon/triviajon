@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+	<style>
+		figure img {
+		max-width: 100%;
+		display: block;
+		transition: transform 0.3s ease;
+		transform-origin: center;
+		}
+
+		figure img:hover {
+		transform: scale(1.2);
+		cursor: zoom-in;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Jon Rosario</strong> — <em>jonros@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+    <h2>Proposition: Abuse of authority does not hinder career advancement in the NYPD.</h2>
+
+		<section>
+      <h3>FOR the Proposition</h3>
+
+      <figure>
+				<img src="for.png" alt="" />
+				<figcaption>
+					Plot depicting how officers in precincts in Brooklyn, NYC and Bronx, NYC who have had substantiated complaints of abuse of power filed against them progress in terms of rank at the time of incident and rank now. The size of a circle in a row and column represents the number of officers who had complaints filed against them in a particular year, and were the row rank but is now the column rank. Note that this data does not include officers who are no longer on the police force.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>-1: The data was filtered to only include precincts in Brooklyn and the Bronx, both of which have a history of corruption [see: <a href="https://en.wikipedia.org/wiki/The_Seven_Five">https://en.wikipedia.org/wiki/The_Seven_Five</a>], yet the title broadly states "NYC."</li>
+				<li>-1.5: The scheme for circle sizes representing the number of officers transitioning between ranks is difficult to interpret at face value. Additionally, the fact that a "1 transition" count is not depicted as a single dot (but instead has a nonzero area) is misleading.				</li>
+				<li>-2: The visualization only includes officers still on the NYPD, meaning any officers removed from the force due to complaints are absent from the dataset, yet this is mentioned nowhere.</li>
+			</ul>
+    </section>
+
+    <section>
+      <h3>AGAINST the Proposition</h3>
+
+      <figure>
+				<img src="against.png" alt="" />
+				<figcaption>
+					Plot depecting how police officers with filed complaints against them in the Bronx, NYC and Brooklyn, NYC progress in terms of rank. Only shown is officers whose ranks were "police officer" at the time of the complaint. Only shown is officers still on the force. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>1: The title already conveys an interpretation of the results, which may bias readers.</li>
+				<li>-1: The annotation highlights the portion of the data that supports the visualization's intended interpretation. It is also emphasized in red against an otherwise plain graphic.</li>
+				<li>-1: By focusing on officers at the "police officer" rank and repeatedly referring to them as "rookies", a term with a forgiving connotation, the graphic subtly encourages the reader to empathize with them.</li>
+			</ul>
+    </section>
+
+    <section>
+      <h2>Final Reflection</h2>
+
+      <p>It was difficult to come up with a proposition that clearly supported two distinct narratives. Throughout the data exploration process, I mostly looked for a story that could be easily misinterpreted without access to the metadata. Like most people, I typically engage with data visualizations passively: scrolling through them or encountering them in news articles, without paying close attention to the data source or collection methods. I realized that by using this effect, it would be easier to create the visualizations. This process also helped me define my understanding of the line between acceptable and misleading design choices. Fair visualizations should implicitly convey as much metadata as possible. In other words, if I need to read the metadata myself to fully understand the  visualization, it's probably misleading.	</p>
+    </section>
+	</main>
+</body>
+</html>
